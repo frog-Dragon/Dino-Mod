@@ -1,5 +1,6 @@
 package net.frog.dinomod;
 
+import net.frog.dinomod.item.ModCreativeModeTabs;
 import net.frog.dinomod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ public class DinoMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
 
         // Register the item to a creative tab
